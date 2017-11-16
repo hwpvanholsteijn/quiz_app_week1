@@ -8,6 +8,13 @@ namespace quiz_opdracht_weekEen.Models
     {
         private byte difficulty;
 
+        public Question(string question,string awnser, byte difficulty, string category) {
+            this.Text = question;
+            this.Awnser = awnser;
+            this.Difficulty = difficulty;
+            this.Category = category;
+        }
+
         public string Text { get; set; }
         public string Awnser { get; set; }
         public byte Difficulty
@@ -21,6 +28,6 @@ namespace quiz_opdracht_weekEen.Models
                 }
             }
         }
-        public string Categorie { get; set; }
+        public string Category { get; set; }
     }
 }
