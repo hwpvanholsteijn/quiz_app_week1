@@ -8,6 +8,10 @@ namespace quiz_opdracht_weekEen.Models
     {
         private byte difficulty;
 
+        public Question()
+        {
+        }
+
         public Question(string question,string awnser, byte difficulty, string category) {
             this.Text = question;
             this.Awnser = awnser;
@@ -29,5 +33,9 @@ namespace quiz_opdracht_weekEen.Models
             }
         }
         public string Category { get; set; }
+
+        public bool IsCorrect(string awnser) {
+            return Awnser == awnser;
+        }
     }
 }

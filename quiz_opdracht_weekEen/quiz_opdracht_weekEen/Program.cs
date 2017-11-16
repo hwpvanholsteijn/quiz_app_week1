@@ -7,8 +7,8 @@ namespace quiz_opdracht_weekEen
     {
         static void Main(string[] args)
         {
-            Question q = new Question();
-            Console.WriteLine("Hello World!");
+            QuizMaster qM = new QuizMaster();
+            qM.PresentQuestion();
             Console.ReadKey();
         }
     }
