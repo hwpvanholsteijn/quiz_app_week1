@@ -6,7 +6,7 @@ using System.Text;
 
 namespace quiz_opdracht_weekEen.Models
 {
-    class Question
+    class Question : IQuestion
     {
         private int difficulty;
 
