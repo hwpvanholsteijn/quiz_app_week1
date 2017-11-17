@@ -15,6 +15,7 @@ namespace quiz_opdracht_weekEen.Models
         private void FillQuestions() {
             Console.WriteLine("Random quiz");
             unAskedQuestions = qMan.RandomQuestions();
+            //unAskedQuestions = qMan.FilterdQuestionList("Topografie", 1);
         }
 
         public void PresentQuestion()
@@ -26,7 +27,7 @@ namespace quiz_opdracht_weekEen.Models
 
         public void PresentQuestion(Question q) {
             Console.WriteLine(q.Text+"");
-            Console.Write("Jou antwoord:  ");
+            Console.Write("Jouw antwoord:  ");
             String inputLine = Console.ReadLine();
             Console.WriteLine(string.Format("Het antwoord dat je hebt gegeven is: {0}", q.IsCorrect(inputLine)));
             Console.WriteLine("----------------------------------------------------------------------------------------");

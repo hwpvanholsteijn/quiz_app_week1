@@ -1,18 +1,18 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+
 
 namespace quiz_opdracht_weekEen.Models
 {
     class Question
     {
-        private byte difficulty;
+        private int difficulty;
 
-        public Question()
-        {
-        }
+        public Question() { }
 
-        public Question(string question,string awnser, byte difficulty, string category) {
+        public Question(string question,string awnser, int difficulty, string category) {
             this.Text = question;
             this.Awnser = awnser;
             this.Difficulty = difficulty;
@@ -21,7 +21,7 @@ namespace quiz_opdracht_weekEen.Models
 
         public string Text { get; set; }
         public string Awnser { get; set; }
-        public byte Difficulty
+        public int Difficulty
         {
             get { return difficulty; }
             set {
@@ -33,6 +33,8 @@ namespace quiz_opdracht_weekEen.Models
             }
         }
         public string Category { get; set; }
+
+
 
         public bool IsCorrect(string awnser) {
             return Awnser == awnser;

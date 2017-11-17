@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quiz_opdracht_weekEen", "quiz_opdracht_weekEen\quiz_opdracht_weekEen.csproj", "{9BC8A5F4-D1F7-4308-B527-3D5B9D21A514}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "quiz_opdracht_weekEen", "quiz_opdracht_weekEen\quiz_opdracht_weekEen.csproj", "{9BC8A5F4-D1F7-4308-B527-3D5B9D21A514}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
