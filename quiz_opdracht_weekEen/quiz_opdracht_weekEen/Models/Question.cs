@@ -34,10 +34,16 @@ namespace quiz_opdracht_weekEen.Models
         }
         public string Category { get; set; }
 
-
-
         public bool IsCorrect(string awnser) {
             return Awnser == awnser;
+        }
+
+        public void DisplayQuestion(Question q) {
+            Console.WriteLine(q.Text + "");
+            Console.Write("Jouw antwoord:  ");
+            String inputLine = Console.ReadLine();
+            Console.WriteLine(string.Format("Het antwoord dat je hebt gegeven is: {0}", q.IsCorrect(inputLine)));
+            Console.WriteLine("----------------------------------------------------------------------------------------");
         }
     }
 }

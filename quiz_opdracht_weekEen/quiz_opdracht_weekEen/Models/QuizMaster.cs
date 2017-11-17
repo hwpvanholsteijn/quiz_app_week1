@@ -8,12 +8,10 @@ namespace quiz_opdracht_weekEen.Models
     class QuizMaster
     {
         private QuestionManager qMan = new QuestionManager();
-
         private Queue<Question> unAskedQuestions = new Queue<Question>();
 
 
         private void FillQuestions() {
-            Console.WriteLine("Random quiz");
             unAskedQuestions = qMan.RandomQuestions();
             //unAskedQuestions = qMan.FilterdQuestionList("Topografie", 1);
         }
@@ -21,16 +19,13 @@ namespace quiz_opdracht_weekEen.Models
         public void PresentQuestion()
         {
                 this.FillQuestions();
+                Console.WriteLine("An quiz");
                 Console.WriteLine("----------------------------------------------------------------------------------------");
                 this.PresentQuestion(unAskedQuestions.Dequeue());
         }
 
         public void PresentQuestion(Question q) {
-            Console.WriteLine(q.Text+"");
-            Console.Write("Jouw antwoord:  ");
-            String inputLine = Console.ReadLine();
-            Console.WriteLine(string.Format("Het antwoord dat je hebt gegeven is: {0}", q.IsCorrect(inputLine)));
-            Console.WriteLine("----------------------------------------------------------------------------------------");
+            q.DisplayQuestion(q);
             if (unAskedQuestions.Count > 0)
             {
                 this.PresentQuestion(unAskedQuestions.Dequeue());
